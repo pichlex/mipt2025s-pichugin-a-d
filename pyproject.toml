@@ -1,0 +1,41 @@
+[project]
+name = "barcode-refiner"
+version = "0.1.0"
+description = "Local corner auto-refinement for projectively distorted barcodes/QR"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "opencv-contrib-python>=4.8.0",
+    "numpy>=1.24.0",
+    "pyyaml>=6.0",
+    "matplotlib>=3.7",
+    "tqdm>=4.66",
+    "ultralytics>=8.3.0",
+    "hydra-core>=1.3.2",
+    "iopath>=0.1.10",
+    "torchvision>=0.23.0",
+    "pillow>=11.3.0",
+]
+
+[project.scripts]
+refine-image = "barcode_refiner.scripts.refine_image:main"
+evaluate-refiners = "barcode_refiner.scripts.evaluate_refiners:main"
+simulate-dataset = "barcode_refiner.scripts.simulate_dataset:main"
+rectify-patch = "barcode_refiner.scripts.normalize_patch:main"
+demo-pipeline = "barcode_refiner.scripts.pipeline_demo:main"
+decode-qr-demo = "barcode_refiner.scripts.decode_qr_demo:main"
+evaluate-on-markup = "barcode_refiner.scripts.evaluate_on_markup:main"
+evaluate-on-markup-config = "barcode_refiner.scripts.evaluate_on_markup_config:main"
+report-topk = "barcode_refiner.scripts.report_topk:main"
+eval-detector = "barcode_refiner.scripts.detector_eval:main"
+eval-detector-config = "barcode_refiner.scripts.detector_eval_config:main"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

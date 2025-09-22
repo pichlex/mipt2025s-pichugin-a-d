@@ -1,0 +1,25 @@
+images_dir: data/markup_dataset/images
+markup_dir: data/markup_dataset/markup
+out: results/detector_eval
+detector: yolo               # options: yolo | auto
+weights: models/YOLOV8s_Barcode_Detection.pt #YoloV8s30-best.pt   # place this file in project root (or set full path)
+device: auto                       # auto|mps|cuda|cpu
+imgsz: 640
+conf: 0.25
+iou: 0.45
+max_det: 300
+tta_rot: true                      # run 0/90/180/270 rotations
+methods: [noop, subpix, edge, find4quad]
+verbose: 1
+progress: true
+save_preds: true
+collage_all: true
+edge_radius: 4                 # band half-width for 'edge' refiner
+canny_low: 50                  # Canny thresholds for 'edge' refiner
+canny_high: 150
+
+# (Optional) If switching to barseg later, uncomment and set these:
+# sam2_checkpoint: models/sam2.1_hiera_small.pt
+# sam2_config: configs/sam2.1/sam2.1_hiera_s.yaml
+# save_segm: true
+# decode: qr            # options: none | qr | pyzbar
