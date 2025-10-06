@@ -1,8 +1,8 @@
 images_dir: data/markup_dataset/images
 markup_dir: data/markup_dataset/markup
 out: results/detector_eval
-detector: yolo               # options: yolo | auto
-weights: models/YOLOV8s_Barcode_Detection.pt #YoloV8s30-best.pt   # place this file in project root (or set full path)
+detector: yolo               # options: yolo | auto | none
+weights: models/YOLOV8s_Barcode_Detection.pt #YoloV8s30-best.pt
 device: auto                       # auto|mps|cuda|cpu
 imgsz: 640
 conf: 0.25
@@ -14,8 +14,8 @@ verbose: 1
 progress: true
 save_preds: true
 collage_all: true
-edge_radius: 4                 # band half-width for 'edge' refiner
-canny_low: 50                  # Canny thresholds for 'edge' refiner
+edge_radius: 5                 # band half-width for 'edge' refiner
+canny_low: 30                  # Canny thresholds for 'edge' refiner
 canny_high: 150
 
 # (Optional) If switching to barseg later, uncomment and set these:
