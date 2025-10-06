@@ -9,7 +9,7 @@
 ## Актуальный отчёт
 - Актуальный отчёт можно найти здесь:
 
-[ОТЧЁТ](https://github.com/pichlex/mipt2025s-pichugin-a-d/report)
+[ОТЧЁТ](https://github.com/pichlex/mipt2025s-pichugin-a-d/blob/main/report/report.pdf)
 
 ## Установка
 
