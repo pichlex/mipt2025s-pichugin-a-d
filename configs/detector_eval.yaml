@@ -1,7 +1,7 @@
 images_dir: data/markup_dataset/images
 markup_dir: data/markup_dataset/markup
 out: results/detector_eval
-detector: yolo               # options: yolo | auto | none
+detector: none               # options: yolo | auto | none
 weights: models/YOLOV8s_Barcode_Detection.pt #YoloV8s30-best.pt
 device: auto                       # auto|mps|cuda|cpu
 imgsz: 640
